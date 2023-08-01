@@ -1,19 +1,18 @@
 'use client'
 
 import { throttle } from '@/lib/throttle'
-import { useState, useRef, useEffect, useCallback } from 'react'
-import { ChatLine, LoadingChatLine } from './chat-line'
-import { PaperAirplaneIcon } from '@heroicons/react/24/outline'
-import cx from 'classnames'
-import { AcademicCapIcon } from '@heroicons/react/24/outline'
+import { AcademicCapIcon, PaperAirplaneIcon } from '@heroicons/react/24/outline'
 import axios from 'axios'
+import cx from 'classnames'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import toast, { Toaster } from 'react-hot-toast'
+import { ChatLine, LoadingChatLine } from './chat-line'
 
 // default first message to display in UI (not necessary to define the prompt)
 export const initialMessages = [
   {
     role: 'assistant',
-    content: 'Hi! I am a Jeopardy expert. Fire away with trivia questions!',
+    content: 'Good day. Describe what the person you would like to give a present to likes.',
   },
 ]
 
